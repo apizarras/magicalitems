@@ -1,8 +1,8 @@
 
 
 var playerScore = 0;
-var win = 0;
-$("#win").text(win);
+var winCounter = 0;
+$("#win").text(winCounter);
 
 var min = 19;
 var max = 120; 
@@ -19,7 +19,7 @@ var item4 = Math.floor(Math.random() *12 +1);
 console.log(item4);
 
 $(document).ready(function() {
-    $(".win-loss-message").hide();
+    //$(".win-loss-message").hide();
 
 //function to generate a random target number within the min/max
 function randomTargetNumber() {
@@ -39,7 +39,7 @@ function genRandNumber() {
 }
 //reset function
 function restart() {
-    $(".win-loss-message").hide();
+    //$(".win-loss-message").hide();
     //generate numbers
     targetNumber = randomTargetNumber();
     $("#target-number").text(targetNumber);
@@ -66,20 +66,22 @@ function restart() {
 }
 
 function win() {
-        $(".win-loss-message").show();
-        win++;
-        console.log(win);
-        $("#win").append(win);
+        $(".win-loss-message").html("Congratulations! You've Won!!!");
+        winCounter++;
+        console.log("winCounter= " + winCounter);
+        $("#win").append(winCounter);
         restart();
 }
 
 function lost() {
-        $(".win-loss-message").show();
+        console.log("lost function run");
+        $(".win-loss-message").html("Sorry, You've Lost...");
         restart();
 }
 
     $("#item1").on("click", function(event) {
         console.log("clicked");
+        $(".win-loss-message").html("");
         playerScore = playerScore + item1;
         console.log(playerScore);
         console.log(targetNumber);
