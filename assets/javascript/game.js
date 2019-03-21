@@ -1,7 +1,9 @@
 let playerScore = 0;
 let winCounter = 0;
+let lossCounter = 0;
 
-$("#win").text(winCounter);
+$("#win").html(winCounter);
+$("#losses").html(lossCounter);
 
 $(".win-loss-message").html("");
 
@@ -68,13 +70,15 @@ function win() {
         $(".win-loss-message").html("Congratulations! You've Won!!!");
         winCounter++;
         console.log("winCounter= " + winCounter);
-        $("#win").append(winCounter);
+        $("#win").html(winCounter);
         restart();
 }
 
 function lost() {
         console.log("lost function run");
+        lossCounter++;
         $(".win-loss-message").html("Sorry, You've Lost...");
+        $("#losses").html(lossCounter);
         restart();
 }
 
