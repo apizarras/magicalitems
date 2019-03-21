@@ -95,7 +95,7 @@ function lost() {
             else if (playerScore < targetNumber) {
                 console.log("Still Playing");
                 } 
-    })
+    });
 
     $("#item2").on("click", function(event) {
         console.log("clicked");
@@ -113,7 +113,7 @@ function lost() {
             else if (playerScore < targetNumber) {
                 console.log("Still Playing");
                 } 
-    })
+    });
     $("#item3").on("click", function(event) {
         console.log("clicked");
         $(".win-loss-message").html("");
@@ -130,7 +130,7 @@ function lost() {
             else if (playerScore < targetNumber) {
                 console.log("Still Playing");
                 } 
-    })
+    });
     $("#item4").on("click", function(event) {
         console.log("clicked");
         $(".win-loss-message").html("");
@@ -147,7 +147,7 @@ function lost() {
             else if (playerScore < targetNumber) {
                 console.log("Still Playing");
                 } 
-    })
+    });
 
 
 
