@@ -1,39 +1,39 @@
-var playerScore = 0;
-var winCounter = 0;
+let playerScore = 0;
+let winCounter = 0;
 
 $("#win").text(winCounter);
 
 $(".win-loss-message").html("");
 
-var min = 19;
-var max = 120; 
-var targetNumber = Math.floor(Math.random() * (max - min+1)) + min;
+const min = 19;
+const max = 120; 
+let targetNumber = Math.floor(Math.random() * (max - min+1)) + min;
 console.log(targetNumber);
 $("#target-number").text(targetNumber);
-var item1 = Math.floor(Math.random() *12 +1);
+let item1 = Math.floor(Math.random() *12 +1);
 console.log(item1);
-var item2 = Math.floor(Math.random() *12 +1);
+let item2 = Math.floor(Math.random() *12 +1);
 console.log(item2);
-var item3 = Math.floor(Math.random() *12 +1);
+let item3 = Math.floor(Math.random() *12 +1);
 console.log(item3);
-var item4 = Math.floor(Math.random() *12 +1);
+let item4 = Math.floor(Math.random() *12 +1);
 console.log(item4);
 
 $(document).ready(function() {
 
 //function to generate a random target number within the min/max
 function randomTargetNumber() {
-    var min = 19;
-    var max = 120;  
-    var targetNumber = Math.floor(Math.random() * (max - min+1)) + min;
+    const min = 19;
+    const max = 120;  
+    const targetNumber = Math.floor(Math.random() * (max - min+1)) + min;
     return targetNumber;
     console.log(targetNumber);
 }
 //function to generate a random number with the clickable items min/mas
 function genRandNumber() {
-    var itemMin = 1;
-    var itemMax = 12;
-    var randomItemNumber = Math.floor(Math.random() * (itemMax - itemMin + 1)) +itemMin;
+    const itemMin = 1;
+    const itemMax = 12;
+    const randomItemNumber = Math.floor(Math.random() * (itemMax - itemMin + 1)) +itemMin;
     return randomItemNumber;
     console.log(randomItemNumber);
 }
